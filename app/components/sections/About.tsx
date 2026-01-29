@@ -12,7 +12,7 @@ export default function About() {
         >
             <section
                 id="about"
-                className="py-28 px-6 bg-black border-t border-neutral-900"
+                className="py-28 px-6 border-t border-neutral-900"
             >
                 <div className="max-w-6xl mx-auto">
                     <div className="grid md:grid-cols-2 gap-16 items-center">
@@ -36,7 +36,7 @@ export default function About() {
                         </div>
 
                         {/* Values */}
-                        <div className="p-10 rounded-3xl bg-neutral-950 border border-neutral-800">
+                        <div className="p-10 rounded-3xl border border-neutral-800">
                             <h3 className="text-xl font-semibold mb-6">
                                 Nuestra forma de trabajar
                             </h3>

@@ -5,6 +5,7 @@ import Solutions from "./components/sections/Solutions";
 import Plans from "./components/sections/Plans";
 import Contact from "./components/sections/Contact";
 import AgentCTA from "./components/sections/AgentCTA";
+import ChatLauncher from "./components/chat/ChatLauncher";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <Solutions />
       <Plans />
       <AgentCTA />
+      <ChatLauncher />
     </>
   );
 }

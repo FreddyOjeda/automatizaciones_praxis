@@ -2,6 +2,7 @@ import "./globals.css";
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
 import ChatLauncher from "./components/chat/ChatLauncher";
+import BackgroundScene from "./components/background/BackgroundScene";
 
 export const metadata = {
   title: "Automatizaciones Praxis",
@@ -23,6 +24,7 @@ export default function RootLayout({
         <ChatLauncher />
         <Footer />
       </body>
+      <BackgroundScene />
     </html>
   );
 }

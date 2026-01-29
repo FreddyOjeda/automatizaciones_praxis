@@ -11,7 +11,7 @@ export default function Hero() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
         >
-            <section className="relative min-h-screen flex items-center justify-center px-6 overflow-hidden">
+            <section id="hero" className="relative min-h-screen flex items-center justify-center px-6 overflow-hidden">
 
                 {/* Background effects */}
                 <div className="absolute inset-0 -z-10 overflow-hidden">
@@ -54,13 +54,24 @@ export default function Hero() {
                     {/* CTAs */}
                     <FadeIn delay={0.3}>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <button className="px-8 py-4 rounded-xl bg-white text-black font-semibold hover:scale-105 transition">
+                            <button
+                                onClick={() => {
+                                    const message = encodeURIComponent(
+                                        "Hola, quiero información sobre automatizaciones para mi negocio."
+                                    );
+
+                                    window.open(
+                                        `https://wa.me/573125946327?text=${message}`,
+                                        "_blank"
+                                    );
+                                }}
+                                className="px-8 py-4 rounded-xl bg-white text-black font-semibold hover:scale-105 transition cursor-pointer">
                                 Hablar con un experto
                             </button>
 
-                            <button className="px-8 py-4 rounded-xl border border-neutral-700 text-white hover:bg-white/5 transition">
+                            <a href="#solutions" className="px-8 py-4 rounded-xl border border-neutral-700 text-white hover:bg-white/5 transition">
                                 Ver soluciones
-                            </button>
+                            </a>
                         </div>
                     </FadeIn>
                 </div>

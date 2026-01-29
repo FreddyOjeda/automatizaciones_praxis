@@ -8,15 +8,13 @@ export default function ChatMessageBubble({
     const isBot = message.role === "bot";
 
     return (
-        <div
-            className={`flex ${isBot ? "justify-start" : "justify-end"}`}
-        >
+        <div className={`flex ${isBot ? "justify-start" : "justify-end"}`}>
             <div
                 className={`
-                    max-w-[80%] px-4 py-3 rounded-2xl text-sm
+                    max-w-[80%] px-4 py-3 rounded-2xl text-sm leading-relaxed
                     ${isBot
-                                    ? "bg-neutral-800 text-white"
-                                    : "bg-cyan-500 text-black"
+                                    ? "bg-white/5 border border-white/10 text-white"
+                                    : "bg-cyan-400 text-black"
                                 }
                     `}
             >

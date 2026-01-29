@@ -6,7 +6,7 @@ export default function AgentCTA() {
     return (
         <section
             id="agent"
-            className="relative py-28 px-6 bg-black border-t border-neutral-900 overflow-hidden"
+            className="relative py-28 px-6 border-t border-neutral-900 overflow-hidden"
         >
             {/* Glow ambiental */}
             <div className="absolute inset-0 -z-10">
@@ -41,25 +41,40 @@ export default function AgentCTA() {
                     <motion.button
                         whileHover={{ scale: 1.04 }}
                         whileTap={{ scale: 0.96 }}
+                        onClick={() => {
+                            window.dispatchEvent(new Event("open-chat"));
+                        }}
                         className="
                             px-8 py-4 rounded-xl font-semibold
                             bg-gradient-to-r from-cyan-400 to-purple-500
                             text-black
                             shadow-[0_0_40px_-10px_rgba(34,211,238,0.6)]
-                            "
+                        "
                     >
                         Hablar con un agente
                     </motion.button>
 
+
                     <button
+                        onClick={() => {
+                            const message = encodeURIComponent(
+                                "Hola, quiero información sobre automatizaciones para mi negocio."
+                            );
+
+                            window.open(
+                                `https://wa.me/573125946327?text=${message}`,
+                                "_blank"
+                            );
+                        }}
                         className="
                             px-8 py-4 rounded-xl
                             border border-neutral-700
                             hover:bg-white/5 transition
-                            "
+                        "
                     >
                         Contacto por WhatsApp
                     </button>
+
                 </div>
 
                 {/* Nota futura */}

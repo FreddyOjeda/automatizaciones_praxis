@@ -11,7 +11,7 @@ export default function Plans() {
         >
             <section
                 id="plans"
-                className="py-28 px-6 bg-neutral-950 border-t border-neutral-900"
+                className="py-28 px-6 border-t border-neutral-900"
             >
                 <div className="max-w-6xl mx-auto">
                     {/* Header */}
@@ -29,7 +29,7 @@ export default function Plans() {
                     {/* Plans */}
                     <div className="grid md:grid-cols-3 gap-8">
                         {/* Plan 1 */}
-                        <div className="p-8 rounded-2xl bg-black border border-neutral-800 hover:border-cyan-500/40 transition">
+                        <div className="p-8 rounded-2xl border border-neutral-800 hover:border-cyan-500/40 transition">
                             <h3 className="text-xl font-semibold mb-4">
                                 Diagnóstico y asesoría
                             </h3>
@@ -48,7 +48,7 @@ export default function Plans() {
                         </div>
 
                         {/* Plan 2 */}
-                        <div className="p-8 rounded-2xl bg-black border border-neutral-800 hover:border-purple-500/40 transition">
+                        <div className="p-8 rounded-2xl border border-neutral-800 hover:border-purple-500/40 transition">
                             <h3 className="text-xl font-semibold mb-4">
                                 Implementación de soluciones
                             </h3>
@@ -67,7 +67,7 @@ export default function Plans() {
                         </div>
 
                         {/* Plan 3 */}
-                        <div className="p-8 rounded-2xl bg-black border border-neutral-800 hover:border-emerald-500/40 transition">
+                        <div className="p-8 rounded-2xl border border-neutral-800 hover:border-emerald-500/40 transition">
                             <h3 className="text-xl font-semibold mb-4">
                                 Evolución y soporte
                             </h3>

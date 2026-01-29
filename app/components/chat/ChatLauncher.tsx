@@ -1,54 +1,40 @@
 "use client";
 
-import { motion, AnimatePresence } from "framer-motion";
-import Image from "next/image";
-import { useState } from "react";
-import ChatWindow from "./ChatWindow";
+import { useEffect, useState } from "react";
+import ChatWidget from "./ChatWidget";
 
 export default function ChatLauncher() {
     const [open, setOpen] = useState(false);
 
+    // 👇 AQUÍ VA (ESTE ERA EL DUDOSO)
+    useEffect(() => {
+        const openChat = () => {
+            setOpen((prev) => (prev ? prev : true));
+        };
+
+        window.addEventListener("open-chat", openChat);
+
+        return () => {
+            window.removeEventListener("open-chat", openChat);
+        };
+    }, []);
+
+
     return (
         <>
-            {/* Chat Window */}
-            <AnimatePresence>
-                {open && <ChatWindow onClose={() => setOpen(false)} />}
-            </AnimatePresence>
-
-            {/* Floating Button */}
-            <motion.div
-                initial={{ opacity: 0, y: 40 }}
-                animate={{ opacity: 1, y: 0 }}
-                className="fixed bottom-6 right-6 z-50"
+            <button
+                onClick={() => setOpen(true)}
+                className="fixed bottom-6 right-6 z-50 flex items-center gap-3 rounded-full bg-neutral-900 px-4 py-3 shadow-xl border border-neutral-700 hover:bg-neutral-800 transition"
             >
-                <motion.button
-                    onClick={() => setOpen(true)}
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="
-                        flex items-center gap-3
-                        px-4 py-3
-                        rounded-full
-                        bg-black border border-neutral-700
-                        shadow-[0_0_30px_-10px_rgba(34,211,238,0.6)]
-                    "
-                >
-                    {/* Logo / Avatar */}
-                    <div className="relative w-10 h-10 rounded-full overflow-hidden">
-                        <Image
-                            src="/praxis-removebg-preview.png" // tú puedes cambiarla
-                            alt="Agente Praxis"
-                            fill
-                            className="object-cover"
-                        />
-                    </div>
+                <img
+                    src="/praxis-removebg-preview.png"
+                    alt="Praxis"
+                    className="w-8 h-8 rounded-full"
+                />
+                <span className="text-sm text-white">¿Chateamos?</span>
+            </button>
 
-                    {/* Texto */}
-                    <span className="text-sm font-medium text-white">
-                        ¿Chateamos?
-                    </span>
-                </motion.button>
-            </motion.div>
+            {open && <ChatWidget onClose={() => setOpen(false)} />}
         </>
     );
 }

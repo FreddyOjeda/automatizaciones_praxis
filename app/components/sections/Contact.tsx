@@ -10,7 +10,7 @@ export default function Contact() {
         >
             <section
                 id="contact"
-                className="py-28 px-6 bg-black border-t border-neutral-900"
+                className="py-28 px-6 border-t border-neutral-900"
             >
                 <div className="max-w-5xl mx-auto text-center">
                     <h2 className="text-3xl md:text-4xl font-bold mb-6">

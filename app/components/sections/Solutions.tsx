@@ -12,7 +12,7 @@ export default function Solutions() {
         >
             <section
                 id="solutions"
-                className="py-28 px-6 bg-black border-t border-neutral-900"
+                className="py-28 px-6 border-t border-neutral-900"
             >
                 <div className="max-w-6xl mx-auto">
                     {/* Header */}
@@ -31,7 +31,7 @@ export default function Solutions() {
                     {/* Solutions grid */}
                     <div className="grid md:grid-cols-2 gap-10">
                         {/* Restaurants */}
-                        <div className="relative p-10 rounded-3xl bg-neutral-950 border border-neutral-800 hover:border-cyan-500/40 transition">
+                        <div className="relative p-10 rounded-3xl border border-neutral-800 hover:border-cyan-500/40 transition">
                             <span className="absolute top-6 right-6 text-xs px-3 py-1 rounded-full border border-cyan-500/30 text-cyan-400">
                                 Especialización
                             </span>
@@ -56,7 +56,7 @@ export default function Solutions() {
                         </div>
 
                         {/* Other businesses */}
-                        <div className="p-10 rounded-3xl bg-neutral-950 border border-neutral-800 hover:border-purple-500/40 transition">
+                        <div className="p-10 rounded-3xl border border-neutral-800 hover:border-purple-500/40 transition">
                             <h3 className="text-2xl font-semibold mb-6">
                                 Otros negocios
                             </h3>

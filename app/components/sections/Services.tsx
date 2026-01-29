@@ -14,7 +14,7 @@ export default function Services() {
         >
             <section
                 id="services"
-                className="py-28 px-6 bg-neutral-950 border-t border-neutral-900"
+                className="py-28 px-6 border-t border-neutral-900"
             >
                 <div className="max-w-6xl mx-auto">
                     {/* Header */}
@@ -37,7 +37,7 @@ export default function Services() {
                             <StaggerItem key="1">
                                 {/* Service 1 */}
                                 <FadeIn delay={0.2} >
-                                    <div className="relative p-8 rounded-2xl bg-black border border-neutral-800
+                                    <div className="relative p-8 rounded-2xl border border-neutral-800
                                     transition-all duration-300
                                     hover:-translate-y-1
                                     hover:shadow-[0_0_40px_-10px_rgba(34,211,238,0.35)]
@@ -57,7 +57,7 @@ export default function Services() {
                             <StaggerItem key="2">
                                 {/* Service 2 */}
                                 <FadeIn delay={0.3}>
-                                    <div className="relative p-8 rounded-2xl bg-black border border-neutral-800
+                                    <div className="relative p-8 rounded-2xl border border-neutral-800
                                     transition-all duration-300
                                     hover:-translate-y-1
                                     hover:shadow-[0_0_40px_-10px_rgba(34,211,238,0.35)]
@@ -77,7 +77,7 @@ export default function Services() {
                             <StaggerItem key="3">
                                 {/* Service 3 */}
                                 <FadeIn delay={0.4}>
-                                    <div className="relative p-8 rounded-2xl bg-black border border-neutral-800
+                                    <div className="relative p-8 rounded-2xl border border-neutral-800
                                     transition-all duration-300
                                     hover:-translate-y-1
                                     hover:shadow-[0_0_40px_-10px_rgba(34,211,238,0.35)]
