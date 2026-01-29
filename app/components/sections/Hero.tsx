@@ -19,8 +19,8 @@ export default function Hero() {
                     <div className="absolute top-1/3 -right-24 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl" />
                 </div>
                 <div className="absolute inset-0 -z-10">
-                    <div className="absolute top-1/3 left-1/2 w-[600px] h-[600px] -translate-x-1/2 -translate-y-1/2 bg-purple-600/20 blur-[120px]" />
-                    <div className="absolute top-2/3 left-1/3 w-[400px] h-[400px] bg-cyan-500/20 blur-[120px]" />
+                    <div className="absolute top-1/3 left-1/2 w-150 h-150 -translate-x-1/2 -translate-y-1/2 bg-purple-600/20 blur-[120px]" />
+                    <div className="absolute top-2/3 left-1/3 w-100 h-100 bg-cyan-500/20 blur-[120px]" />
                 </div>
 
                 <div className="max-w-5xl text-center">
@@ -35,7 +35,7 @@ export default function Hero() {
                     <FadeIn delay={0.1}>
                         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-8">
                             Automatizamos la atención, las ventas y los procesos de tu negocio
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500">
+                            <span className="text-transparent bg-clip-text bg-linear-to-r from-cyan-400 to-purple-500">
                                 {" "}con inteligencia artificial
                             </span>
                         </h1>

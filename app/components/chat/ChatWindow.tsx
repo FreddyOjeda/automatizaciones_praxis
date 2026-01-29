@@ -55,7 +55,7 @@ export default function ChatWindow({ onClose }: Props) {
             exit={{ opacity: 0, y: 30 }}
             className="
                     fixed bottom-24 right-6 z-50
-                    w-[360px] h-[520px]
+                    w-90 h-130
                     bg-neutral-950
                     border border-white/10
                     rounded-2xl

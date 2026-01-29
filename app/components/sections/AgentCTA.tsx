@@ -10,7 +10,7 @@ export default function AgentCTA() {
         >
             {/* Glow ambiental */}
             <div className="absolute inset-0 -z-10">
-                <div className="absolute top-1/2 left-1/2 w-[600px] h-[600px] -translate-x-1/2 -translate-y-1/2 bg-cyan-500/10 rounded-full blur-3xl" />
+                <div className="absolute top-1/2 left-1/2 w-150 h-150 -translate-x-1/2 -translate-y-1/2 bg-cyan-500/10 rounded-full blur-3xl" />
             </div>
 
             <motion.div
@@ -46,7 +46,7 @@ export default function AgentCTA() {
                         }}
                         className="
                             px-8 py-4 rounded-xl font-semibold
-                            bg-gradient-to-r from-cyan-400 to-purple-500
+                            bg-linear-to-r from-cyan-400 to-purple-500
                             text-black
                             shadow-[0_0_40px_-10px_rgba(34,211,238,0.6)]
                         "
