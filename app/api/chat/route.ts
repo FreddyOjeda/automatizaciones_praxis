@@ -2,10 +2,6 @@ import fs from "fs";
 import path from "path";
 import OpenAI from "openai";
 
-const openai = new OpenAI({
-    apiKey: process.env.OPENAI_API_KEY!,
-});
-
 // 👉 cargamos el prompt una sola vez
 const systemPrompt = fs.readFileSync(
     path.join(process.cwd(), "prompts/praxis-agent.md"),
@@ -13,6 +9,11 @@ const systemPrompt = fs.readFileSync(
 );
 
 export async function POST(req: Request) {
+    // ⚠️ crea el cliente aquí, en runtime
+    const openai = new OpenAI({
+        apiKey: process.env.OPENAI_API_KEY!,
+    });
+
     const { messages } = await req.json();
 
     const completion = await openai.chat.completions.create({
