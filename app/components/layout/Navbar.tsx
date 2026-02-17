@@ -23,7 +23,7 @@ export default function Navbar() {
         { id: "services", label: "Servicios" },
         { id: "solutions", label: "Soluciones" },
         { id: "plans", label: "Planes" },
-        { id: "contact", label: "Contacto" },
+        { id: "agent", label: "Contacto" },
     ];
 
     return (
@@ -35,7 +35,7 @@ export default function Navbar() {
                     onClick={() => scrollToSection("hero")}
                     className="font-bold text-lg tracking-wide hover:opacity-80 transition"
                 >
-                    Praxis
+                    Automatizaciones Praxis
                 </button>
 
                 {/* Desktop */}

@@ -54,7 +54,6 @@ export default function AgentCTA() {
                         Hablar con un agente
                     </motion.button>
 
-
                     <button
                         onClick={() => {
                             const message = encodeURIComponent(
@@ -69,18 +68,74 @@ export default function AgentCTA() {
                         className="
                             px-8 py-4 rounded-xl
                             border border-neutral-700
-                            hover:bg-white/5 transition
+                            bg-green-600
+                            hover:bg-white/5
+                            hover:border-green-600
+                            hover:text-green-600
+                            transition
                         "
                     >
+                        <i className="fa-brands fa-whatsapp mx-2"></i>
                         Contacto por WhatsApp
                     </button>
-
                 </div>
 
-                {/* Nota futura */}
+                {/* Nota */}
                 <p className="mt-6 text-sm text-gray-500">
                     Atención asistida por inteligencia artificial y equipo humano.
                 </p>
+
+                {/* -------- REDES SOCIALES -------- */}
+                <div className="mt-10 border-neutral-800 pt-5">
+                    <p className="text-sm text-gray-400 mb-6">
+                        Síguenos en nuestras redes sociales
+                    </p>
+
+                    <div className="flex justify-center gap-6">
+                        {/* Instagram */}
+                        <motion.a
+                            whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.95 }}
+                            href="https://www.instagram.com/praxis_automatizaciones/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="
+                                w-14 h-14 flex items-center justify-center
+                                rounded-xl
+                                border border-neutral-700
+                                bg-neutral-900
+                                hover:border-pink-500
+                                hover:text-pink-500
+                                transition
+                                text-xl
+                            "
+                        >
+                            <i className="fa-brands fa-instagram"></i>
+                        </motion.a>
+
+                        {/* Facebook */}
+                        <motion.a
+                            whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.95 }}
+                            href="https://www.facebook.com/profile.php?id=61585835588023"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="
+                                w-14 h-14 flex items-center justify-center
+                                rounded-xl
+                                border border-neutral-700
+                                bg-neutral-900
+                                hover:border-blue-500
+                                hover:text-blue-500
+                                transition
+                                text-xl
+                            "
+                        >
+                            <i className="fa-brands fa-facebook-f"></i>
+                        </motion.a>
+                    </div>
+                </div>
+
             </motion.div>
         </section>
     );
