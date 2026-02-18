@@ -9,7 +9,7 @@ import ChatLauncher from "./components/chat/ChatLauncher";
 
 export default function Home() {
   return (
-    <>
+    <div>
       <Hero />
       <About />
       <Services />
@@ -17,6 +17,6 @@ export default function Home() {
       <Plans />
       <AgentCTA />
       <ChatLauncher />
-    </>
+    </div>
   );
 }

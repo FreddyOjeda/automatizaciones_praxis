@@ -14,10 +14,10 @@ export default function Contact() {
             >
                 <div className="max-w-5xl mx-auto text-center">
                     <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                        Hablemos sobre tu negocio
+                        Hablemos sobre tu empresa
                     </h2>
                     <p className="text-lg text-gray-300 mb-12">
-                        Cuéntanos qué tipo de negocio tienes y qué te gustaría automatizar.
+                        Cuéntanos qué tipo de empresa tienes y qué te gustaría automatizar.
                         Te ayudamos a identificar la mejor solución para tu operación.
                     </p>
 

@@ -50,49 +50,81 @@ export default function ChatWidget({ onClose }: { onClose: () => void }) {
     }
 
     return (
-        <div className="chat-window fixed bottom-24 right-6 z-50 w-80 rounded-2xl bg-black border border-neutral-800 shadow-2xl flex flex-col overflow-hidden">
+        <div className="chat-window fixed bottom-24 right-6 z-50 w-80 rounded-2xl 
+                    backdrop-blur-xl
+                    border dark:border-neutral-600
+                    shadow-[0_20px_60px_-15px_rgba(0,0,0,0.7)]
+                    flex flex-col overflow-hidden">
+
             {/* Header */}
-            <div className="chat-header flex items-center justify-between px-4 py-3 
-                            bg-linear-to-r from-cyan-400 to-purple-500 text-black">
-                <span className="text-sm font-medium"><strong>Praxis Bot</strong></span>
-                <button onClick={onClose}>✕</button>
+            <div className="flex items-center justify-between px-4 py-3
+                        bg-linear-to-r from-cyan-400 to-purple-500
+                        text-black">
+                <span className="text-sm font-semibold">
+                    Praxis Bot
+                </span>
+                <button
+                    onClick={onClose}
+                    className="text-black/70 hover:text-black transition"
+                >
+                    ✕
+                </button>
             </div>
 
             {/* Messages */}
-            <div className="chat-messages flex-1 p-4 space-y-3 overflow-y-auto text-sm">
+            <div className="flex-1 p-4 space-y-3 overflow-y-auto text-sm">
+
                 {messages.map((msg, i) => (
                     <div
                         key={i}
-                        className={`max-w-[85%] px-3 py-2 rounded-xl ${msg.role === "user"
-                            ? "ml-auto bg-white text-black"
-                            : "bg-neutral-800"
+                        className={`max-w-[85%] px-4 py-2 rounded-2xl text-sm
+                        ${msg.role === "user"
+                                ? "ml-auto bg-linear-to-r from-cyan-400 to-purple-500 text-black shadow-md"
+                                : "bg-neutral-400 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-200"
                             }`}
                     >
                         {msg.content}
                     </div>
                 ))}
+
                 {loading && (
-                    <div className="text-xs text-neutral-400">Escribiendo…</div>
+                    <div className="text-xs text-neutral-500 animate-pulse">
+                        Escribiendo…
+                    </div>
                 )}
-                {/* ancla */}
+
                 <div ref={messagesEndRef} />
             </div>
+
             {/* Input */}
-            <div className="chat-input flex gap-2 p-3 border-t border-neutral-800">
+            <div className="flex gap-2 p-3">
+
                 <input
                     value={input}
                     onChange={(e) => setInput(e.target.value)}
                     onKeyDown={(e) => e.key === "Enter" && sendMessage()}
                     placeholder="Escribe tu mensaje..."
-                    className="flex-1 rounded-lg bg-neutral-900 px-3 py-2 text-sm outline-none"
+                    className="flex-1 rounded-xl bg-neutral-400 dark:bg-neutral-800 px-3 py-2 text-sm
+                        placeholder-neutral-500
+                        outline-none
+                        focus:ring-2 focus:ring-cyan-400/50
+                        transition"
                 />
+
                 <button
                     onClick={sendMessage}
-                    className="px-3 rounded-lg bg-gradient-to-r from-cyan-400 to-purple-500 text-black text-sm"
+                    className="px-4 rounded-xl
+                        bg-linear-to-r from-cyan-400 to-purple-500
+                        text-black text-sm font-semibold
+                        hover:scale-105 active:scale-95
+                        transition-all duration-200
+                        shadow-[0_0_20px_-5px_rgba(34,211,238,0.7)]"
                 >
-                    <strong>Enviar</strong>
+                    Enviar
                 </button>
+
             </div>
         </div>
     );
+
 }

@@ -16,9 +16,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
-      <body className="bg-black text-white antialiased">
+      <body className="antialiased">
         <Navbar />
-        <main className="pt-16">
+        <main>
           {children}
         </main>
         <ChatLauncher />

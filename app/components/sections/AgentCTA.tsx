@@ -6,7 +6,7 @@ export default function AgentCTA() {
     return (
         <section
             id="agent"
-            className="relative py-28 px-6 border-t border-neutral-900 overflow-hidden"
+            className="relative py-28 px-6 border-t border-neutral-200 dark:border-neutral-800 overflow-hidden"
         >
             {/* Glow ambiental */}
             <div className="absolute inset-0 -z-10">
@@ -21,16 +21,23 @@ export default function AgentCTA() {
                 className="max-w-4xl mx-auto text-center"
             >
                 {/* Badge */}
-                <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 rounded-full border border-cyan-500/30 bg-cyan-500/10 text-cyan-400 text-sm">
+                <div className="
+                    inline-flex items-center gap-2 px-4 py-2 mb-6
+                    rounded-full
+                    border border-cyan-500/40
+                    bg-cyan-500/10
+                    text-cyan-600 dark:text-cyan-400
+                    text-sm
+                ">
                     <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
                     Agente disponible
                 </div>
 
-                <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                    ¿Hablamos sobre tu negocio?
+                <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
+                    ¿Hablamos sobre tu empresa?
                 </h2>
 
-                <p className="text-lg text-gray-300 mb-10">
+                <p className="text-lg text-neutral-600 dark:text-neutral-400 mb-10">
                     Nuestro agente puede ayudarte a identificar oportunidades de
                     automatización, resolver dudas y recomendarte la mejor solución según
                     tu operación.
@@ -46,8 +53,8 @@ export default function AgentCTA() {
                         }}
                         className="
                             px-8 py-4 rounded-xl font-semibold
-                            bg-linear-to-r from-cyan-400 to-purple-500
-                            text-black
+                            bg-gradient-to-r from-cyan-500 to-purple-600
+                            text-white
                             shadow-[0_0_40px_-10px_rgba(34,211,238,0.6)]
                         "
                     >
@@ -57,7 +64,7 @@ export default function AgentCTA() {
                     <button
                         onClick={() => {
                             const message = encodeURIComponent(
-                                "Hola, quiero información sobre automatizaciones para mi negocio."
+                                "Hola, quiero información sobre automatizaciones para mi empresa."
                             );
 
                             window.open(
@@ -66,8 +73,8 @@ export default function AgentCTA() {
                             );
                         }}
                         className="
-                            px-8 py-4 rounded-xl
-                            border border-neutral-700
+                            px-8 py-4 rounded-xl font-semibold text-white
+                            border border-neutral-100 dark:border-neutral-700
                             bg-green-600
                             hover:bg-white/5
                             hover:border-green-600
@@ -81,13 +88,13 @@ export default function AgentCTA() {
                 </div>
 
                 {/* Nota */}
-                <p className="mt-6 text-sm text-gray-500">
+                <p className="mt-6 text-sm text-neutral-500">
                     Atención asistida por inteligencia artificial y equipo humano.
                 </p>
 
                 {/* -------- REDES SOCIALES -------- */}
-                <div className="mt-10 border-neutral-800 pt-5">
-                    <p className="text-sm text-gray-400 mb-6">
+                <div className="mt-10 border-neutral-200 dark:border-neutral-800 pt-5">
+                    <p className="text-sm text-neutral-400 mb-6">
                         Síguenos en nuestras redes sociales
                     </p>
 
@@ -102,12 +109,10 @@ export default function AgentCTA() {
                             className="
                                 w-14 h-14 flex items-center justify-center
                                 rounded-xl
-                                border border-neutral-700
-                                bg-neutral-900
-                                hover:border-pink-500
-                                hover:text-pink-500
-                                transition
-                                text-xl
+                                border border-neutral-300 dark:border-neutral-700
+                                bg-neutral-100 dark:bg-neutral-900
+                                hover:border-pink-500 hover:text-pink-500
+                                transition text-xl
                             "
                         >
                             <i className="fa-brands fa-instagram"></i>
@@ -123,12 +128,10 @@ export default function AgentCTA() {
                             className="
                                 w-14 h-14 flex items-center justify-center
                                 rounded-xl
-                                border border-neutral-700
-                                bg-neutral-900
-                                hover:border-blue-500
-                                hover:text-blue-500
-                                transition
-                                text-xl
+                                border border-neutral-300 dark:border-neutral-700
+                                bg-neutral-100 dark:bg-neutral-900
+                                hover:border-blue-500 hover:text-blue-500
+                                transition text-xl
                             "
                         >
                             <i className="fa-brands fa-facebook-f"></i>
