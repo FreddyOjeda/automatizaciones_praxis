@@ -92,7 +92,18 @@ export default function Services() {
                             </div>
                         </Stagger>
 
-                        <div className="hidden lg:block" />
+                        <div className="hidden lg:flex items-center justify-center">
+                            <div className="relative w-72 max-w-md rounded-2xl overflow-hidden border border-neutral-200 dark:border-neutral-800 shadow-xl">
+                                <video
+                                    src="/videos/demostracion.mp4"
+                                    autoPlay
+                                    loop
+                                    muted
+                                    playsInline
+                                    className="w-auto h-auto object-cover pointer-events-none"
+                                />
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
