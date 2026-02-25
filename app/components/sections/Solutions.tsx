@@ -19,7 +19,7 @@ export default function Solutions() {
                     {/* Header */}
                     <div className="max-w-3xl mb-20">
                         <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
-                            Soluciones enfocadas en resultados reales
+                            Soluciones de automatización para ventas, atención y procesos internos
                         </h2>
 
                         <p className="text-lg text-neutral-600 dark:text-neutral-400">

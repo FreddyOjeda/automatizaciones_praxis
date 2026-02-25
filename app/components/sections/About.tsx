@@ -20,7 +20,7 @@ export default function About() {
                         {/* Text */}
                         <div>
                             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
-                                ¿Quiénes somos en Praxis?
+                                ¿Quiénes somos y cómo impulsamos la automatización empresarial?
                             </h2>
 
                             <p className="text-neutral-600 dark:text-neutral-400 text-lg leading-relaxed mb-6">

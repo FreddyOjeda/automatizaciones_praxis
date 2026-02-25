@@ -23,6 +23,7 @@ export default function Navbar() {
         { id: "services", label: "Servicios" },
         { id: "solutions", label: "Soluciones" },
         { id: "plans", label: "Planes" },
+        { id: "faq", label: "FAQs" },
         { id: "agent", label: "Contacto" },
     ];
 

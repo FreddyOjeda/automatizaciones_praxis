@@ -75,14 +75,15 @@ export default function Hero() {
                             font-bold leading-tight mb-8
                             text-foreground
                         ">
-                            Automatizamos la atención, las ventas y los procesos de tu empresa
+                            Automatización empresarial
                             <span className="
                                 text-transparent bg-clip-text
                                 bg-gradient-to-r
                                 from-cyan-500 to-purple-600
                             ">
-                                {" "}con inteligencia artificial
+                                {" "}con inteligencia artificial{" "}
                             </span>
+                            para empresas que quieren crecer
                         </h1>
                     </FadeIn>
 

@@ -34,7 +34,7 @@ export default function AgentCTA() {
                 </div>
 
                 <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
-                    ¿Hablamos sobre tu empresa?
+                    ¿Listo para automatizar tu empresa?
                 </h2>
 
                 <p className="text-lg text-neutral-600 dark:text-neutral-400 mb-10">
