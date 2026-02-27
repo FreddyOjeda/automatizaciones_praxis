@@ -20,6 +20,9 @@ export const metadata: Metadata = {
     "automatización con inteligencia artificial",
     "integraciones empresariales",
   ],
+  icons: {
+    icon: [{ url: "/favicon.ico" }],
+  },
   openGraph: {
     title: "Praxis | Automatización Empresarial",
     description:
