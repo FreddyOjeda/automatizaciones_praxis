@@ -1,39 +1,40 @@
 import Hero from "./components/sections/Hero";
-import About from "./components/sections/About";
+import Problem from "./components/sections/Problem";
+import SolutionPillars from "./components/sections/SolutionPillars";
 import Services from "./components/sections/Services";
-import Solutions from "./components/sections/Solutions";
-import Plans from "./components/sections/Plans";
-import Contact from "./components/sections/Contact";
-import AgentCTA from "./components/sections/AgentCTA";
+import ResultSection from "./components/sections/ResultSection";
+import ForWhom from "./components/sections/ForWhom";
+import SoftwareTeaser from "./components/sections/SoftwareTeaser";
+import CTAFinal from "./components/sections/CTAFinal";
 import ChatLauncher from "./components/chat/ChatLauncher";
-import FAQ from "./components/sections/FAQ";
-import AISection from "./components/sections/AISection";
-import UseCasesSection from "./components/sections/UseCasesSection";
 
 export const metadata = {
-  title: "Automatización de Procesos Empresariales en Colombia | Praxis",
+  title: "Praxisia — Automatización con IA para Negocios | praxisia.org",
   description:
-    "Implementamos automatización empresarial con n8n, inteligencia artificial e integraciones personalizadas. Optimiza tu empresa con Praxis.",
-  keywords: [
-    "automatización empresarial",
-    "automatización con n8n",
-    "automatización Colombia",
-    "integraciones empresariales",
-  ],
+    "Sistemas de IA que responden, agendan y hacen seguimiento por WhatsApp, Instagram y Facebook. Las 24 horas. Sin contratar más gente. Diagnóstico gratuito.",
+  alternates: { canonical: "https://praxisia.org" },
+  openGraph: {
+    title: "Praxisia — Automatización con IA para Negocios",
+    description:
+      "Sistemas que trabajan solos para que tu negocio escale sin contratar más gente.",
+    url: "https://praxisia.org",
+    siteName: "Praxisia",
+    locale: "es_CO",
+    type: "website",
+  },
 };
 
 export default function Home() {
   return (
     <div>
       <Hero />
-      <About />
-      <AISection/>
+      <Problem />
+      <SolutionPillars />
       <Services />
-      <UseCasesSection/>
-      <Solutions />
-      <Plans />
-      <FAQ />
-      <AgentCTA />
+      <ResultSection />
+      <ForWhom />
+      <SoftwareTeaser />
+      <CTAFinal />
       <ChatLauncher />
     </div>
   );

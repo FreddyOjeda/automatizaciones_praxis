@@ -1,112 +1,61 @@
 "use client";
 
-import { Stagger, StaggerItem } from "../ui/Stagger";
-import FadeIn from "../ui/FadeIn";
-import { motion } from "framer-motion";
+import { useLang } from "../ui/LanguageProvider";
+import { t, tx } from "@/app/i18n/translations";
 
 export default function Services() {
-    return (
-        <motion.section
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-        >
-            <section
-                id="services"
-                className="py-28 px-6 border-t border-neutral-200 dark:border-neutral-800"
+  const { lang } = useLang();
+  const items = t.services.items;
+
+  return (
+    <section id="services" className="py-24 px-6" style={{ backgroundColor: "var(--c-surface)", borderTop: "1px solid var(--c-border)" }}>
+      <div className="max-w-5xl mx-auto">
+
+        <div className="mb-16">
+          <span
+            className="text-xs tracking-[0.25em] uppercase px-4 py-2 inline-block mb-8"
+            style={{ fontFamily: "var(--font-mono)", color: "var(--c-signal)", borderLeft: "2px solid var(--c-signal)", backgroundColor: "var(--c-bg)" }}
+          >
+            {tx(t.services.label, lang)}
+          </span>
+          <h2 className="font-black text-4xl md:text-5xl tracking-tight leading-tight" style={{ fontFamily: "var(--font-display)", color: "var(--c-text)" }}>
+            {tx(t.services.headline, lang).split("\n").map((line, i) => (
+              <span key={i}>{line}{i === 0 && <br />}</span>
+            ))}
+          </h2>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-6">
+          {items.map((service, i) => (
+            <div
+              key={i}
+              className="p-8 flex flex-col transition-colors"
+              style={{ border: "1px solid var(--c-border)", backgroundColor: "var(--c-bg)" }}
+              onMouseEnter={e => ((e.currentTarget as HTMLElement).style.borderColor = "var(--c-signal)")}
+              onMouseLeave={e => ((e.currentTarget as HTMLElement).style.borderColor = "var(--c-border)")}
             >
-                <div className="max-w-6xl mx-auto">
+              <span className="text-[10px] tracking-[0.2em] uppercase block mb-6" style={{ fontFamily: "var(--font-mono)", color: "var(--c-signal)" }}>
+                {tx(service.tag, lang)}
+              </span>
+              <h3 className="font-black text-lg leading-tight mb-4" style={{ fontFamily: "var(--font-display)", color: "var(--c-text)" }}>
+                {tx(service.title, lang)}
+              </h3>
+              <p className="text-sm leading-relaxed mb-6 flex-1" style={{ fontFamily: "var(--font-display)", color: "var(--c-muted)" }}>
+                {tx(service.desc, lang)}
+              </p>
+              <ul className="space-y-2">
+                {service.items[lang].map(item => (
+                  <li key={item} className="text-[10px] tracking-wider flex items-center gap-2" style={{ fontFamily: "var(--font-mono)", color: "var(--c-muted)" }}>
+                    <span className="w-3 h-px inline-block flex-shrink-0" style={{ backgroundColor: "var(--c-signal)" }} />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
 
-                    {/* Header */}
-                    <FadeIn delay={0.1}>
-                        <div className="max-w-3xl mb-20">
-                            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
-                                ¿Qué es la automatización empresarial y cómo la implementamos?
-                            </h2>
-
-                            <p className="text-lg text-neutral-600 dark:text-neutral-400">
-                                Diseñamos e implementamos soluciones de automatización e inteligencia
-                                artificial enfocadas en mejorar la atención al cliente, potenciar
-                                las ventas y optimizar los procesos internos de las empresas.
-                            </p>
-                        </div>
-                    </FadeIn>
-
-                    {/* Grid */}
-                    <div className="grid grid-cols-1 lg:grid-cols-[60%_40%] gap-8">
-                        <Stagger>
-                            <div className="grid md:grid-cols-2 gap-8">
-
-                                {/* Card base style */}
-                                {[
-                                    {
-                                        title: "Atención al cliente con IA",
-                                        description:
-                                            "Implementamos agentes inteligentes y chatbots omnicanal capaces de atender clientes 24/7 a través de WhatsApp, web y redes sociales, manteniendo conversaciones naturales y efectivas.",
-                                        hover: "hover:border-cyan-400/50",
-                                    },
-                                    {
-                                        title: "Automatización de ventas",
-                                        description:
-                                            "Automatizamos flujos de venta, calificación de leads y seguimiento comercial para convertir conversaciones en oportunidades reales de negocio.",
-                                        hover: "hover:border-purple-400/50",
-                                    },
-                                    {
-                                        title: "Procesos internos y operaciones",
-                                        description:
-                                            "Automatizamos tareas operativas como reportes, control de inventarios, integraciones entre sistemas y flujos internos para reducir errores y mejorar la eficiencia.",
-                                        hover: "hover:border-green-400/50",
-                                    },
-                                    {
-                                        title: "Integraciones multicanal",
-                                        description:
-                                            "Conectamos tu operación con múltiples canales como WhatsApp, Facebook, Instagram y Telegram, centralizando la atención en una sola infraestructura inteligente.",
-                                        hover: "hover:border-blue-400/50",
-                                    },
-                                ].map((item, index) => (
-                                    <StaggerItem key={index}>
-                                        <FadeIn delay={0.2 + index * 0.1}>
-                                            <div
-                                                className={`
-                                                    relative p-8 rounded-2xl
-                                                    border-2 border-neutral-200 dark:border-neutral-800
-                                                    bg-neutral-50 dark:bg-neutral-900/40
-                                                    transition-all duration-300
-                                                    hover:-translate-y-1
-                                                    hover:shadow-[0_0_40px_-10px_rgba(34,211,238,0.25)]
-                                                    ${item.hover}
-                                                `}
-                                            >
-                                                <h3 className="text-xl font-semibold mb-4 text-foreground">
-                                                    {item.title}
-                                                </h3>
-
-                                                <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed">
-                                                    {item.description}
-                                                </p>
-                                            </div>
-                                        </FadeIn>
-                                    </StaggerItem>
-                                ))}
-                            </div>
-                        </Stagger>
-
-                        <div className="hidden lg:flex items-center justify-center">
-                            <div className="relative w-72 max-w-md rounded-2xl overflow-hidden border border-neutral-200 dark:border-neutral-800 shadow-xl">
-                                <video
-                                    src="/videos/demostracion.mp4"
-                                    autoPlay
-                                    loop
-                                    muted
-                                    playsInline
-                                    className="w-auto h-auto object-cover pointer-events-none"
-                                />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </motion.section>
-    );
+      </div>
+    </section>
+  );
 }
