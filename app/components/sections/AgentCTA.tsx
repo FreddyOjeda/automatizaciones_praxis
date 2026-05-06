@@ -68,7 +68,7 @@ export default function AgentCTA() {
                             );
 
                             window.open(
-                                `https://wa.me/573125946327?text=${message}`,
+                                `https://wa.me/573112195155?text=${message}`,
                                 "_blank"
                             );
                         }}

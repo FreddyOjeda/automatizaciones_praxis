@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useLang } from "../ui/LanguageProvider";
 import { t, tx } from "@/app/i18n/translations";
 
-const WA_NUMBER = "573125946327";
+const WA_NUMBER = "573112195155";
 const WA_MSG_ES = encodeURIComponent("Hola, quiero hablar sobre un proyecto de software.");
 const WA_MSG_EN = encodeURIComponent("Hello, I want to talk about a software project.");
 

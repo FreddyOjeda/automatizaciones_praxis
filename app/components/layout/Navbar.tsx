@@ -8,7 +8,7 @@ import { useTheme } from "../ui/ThemeProvider";
 import { useLang } from "../ui/LanguageProvider";
 import { t, tx } from "@/app/i18n/translations";
 
-const WA_NUMBER = "573125946327";
+const WA_NUMBER = "573112195155";
 const WA_MSG_ES = encodeURIComponent("Hola, quiero un diagnóstico gratuito de mi operación.");
 const WA_MSG_EN = encodeURIComponent("Hello, I want a free diagnosis of my operation.");
 

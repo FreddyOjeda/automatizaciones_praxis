@@ -76,7 +76,7 @@ Invita a contacto humano cuando:
 
 Comparte este enlace en texto plano y en una sola línea:
 
-https://wa.me/573125946327
+https://wa.me/573112195155
 
 Preséntalo de forma natural y breve.
 

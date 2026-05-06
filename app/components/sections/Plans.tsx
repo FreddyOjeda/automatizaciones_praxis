@@ -64,7 +64,7 @@ export default function Plans() {
                                     );
 
                                     window.open(
-                                        `https://wa.me/573125946327?text=${message}`,
+                                        `https://wa.me/573112195155?text=${message}`,
                                         "_blank"
                                     );
                                 }}
@@ -113,7 +113,7 @@ export default function Plans() {
                                     );
 
                                     window.open(
-                                        `https://wa.me/573125946327?text=${message}`,
+                                        `https://wa.me/573112195155?text=${message}`,
                                         "_blank"
                                     );
                                 }}
@@ -166,7 +166,7 @@ export default function Plans() {
                                     );
 
                                     window.open(
-                                        `https://wa.me/573125946327?text=${message}`,
+                                        `https://wa.me/573112195155?text=${message}`,
                                         "_blank"
                                     );
                                 }}
@@ -210,7 +210,7 @@ export default function Plans() {
                                     );
 
                                     window.open(
-                                        `https://wa.me/573125946327?text=${message}`,
+                                        `https://wa.me/573112195155?text=${message}`,
                                         "_blank"
                                     );
                                 }}

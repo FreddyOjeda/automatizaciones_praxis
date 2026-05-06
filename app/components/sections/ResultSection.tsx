@@ -61,7 +61,7 @@ export default function ResultSection() {
               {tx(t.result.after, lang)}
             </span>
             <p className="font-black leading-none tracking-tight mb-4" style={{ fontFamily: "var(--font-display)", color: "var(--c-text)", fontSize: "clamp(56px, 10vw, 96px)" }}>
-              2min
+              40seg
             </p>
             <p className="text-xs tracking-widest uppercase" style={{ fontFamily: "var(--font-mono)", color: "var(--c-signal)" }}>
               {tx(t.result.afterL, lang)}
